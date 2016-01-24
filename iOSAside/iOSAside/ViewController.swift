@@ -8,17 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, TestViewDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let view = self.view as! TestView
+        view.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        print("Memory is fucked...")
     }
-
+    
+    func didAlert() {
+        let alert = UIAlertController(title: "You cannot add a message with more than 13 characters, and no less that 1 character!", message: "Fuck you if that's a problem for you!", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
 }

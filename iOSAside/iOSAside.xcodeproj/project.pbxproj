@@ -15,6 +15,7 @@
 		4A7E199D1C548C77001210FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7E199B1C548C77001210FD /* LaunchScreen.storyboard */; };
 		4A7E19A81C548C78001210FD /* iOSAsideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E19A71C548C78001210FD /* iOSAsideTests.swift */; };
 		4A7E19B31C548C79001210FD /* iOSAsideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E19B21C548C79001210FD /* iOSAsideUITests.swift */; };
+		4A7E19C41C54A783001210FD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7E19C31C54A783001210FD /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4A7E19AE1C548C78001210FD /* iOSAsideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSAsideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7E19B21C548C79001210FD /* iOSAsideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSAsideUITests.swift; sourceTree = "<group>"; };
 		4A7E19B41C548C79001210FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A7E19C31C54A783001210FD /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,10 @@
 		4A7E198E1C548C77001210FD /* iOSAside */ = {
 			isa = PBXGroup;
 			children = (
+				4A7E19C21C54A72E001210FD /* Views */,
+				4A7E19C11C54A728001210FD /* Models */,
+				4A7E19C01C54A71F001210FD /* ViewControllers */,
 				4A7E198F1C548C77001210FD /* AppDelegate.swift */,
-				4A7E19911C548C77001210FD /* ViewController.swift */,
 				4A7E19931C548C77001210FD /* Main.storyboard */,
 				4A7E19991C548C77001210FD /* Assets.xcassets */,
 				4A7E199B1C548C77001210FD /* LaunchScreen.storyboard */,
@@ -126,6 +130,29 @@
 				4A7E19B41C548C79001210FD /* Info.plist */,
 			);
 			path = iOSAsideUITests;
+			sourceTree = "<group>";
+		};
+		4A7E19C01C54A71F001210FD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A7E19911C548C77001210FD /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4A7E19C11C54A728001210FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4A7E19C21C54A72E001210FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A7E19C31C54A783001210FD /* TestView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7E19C41C54A783001210FD /* TestView.swift in Sources */,
 				4A7E19981C548C77001210FD /* iOSAside.xcdatamodeld in Sources */,
 				4A7E19921C548C77001210FD /* ViewController.swift in Sources */,
 				4A7E19901C548C77001210FD /* AppDelegate.swift in Sources */,

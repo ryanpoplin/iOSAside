@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="TestView" customModule="iOSAside" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -34,24 +34,48 @@
                                 <color key="shadowColor" red="1" green="0.36135522850000001" blue="0.53422910270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="-5"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type some shit in here!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VM9-p3-Txp">
+                                <rect key="frame" x="20" y="353" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-sV-kp4">
+                                <rect key="frame" x="20" y="391" width="374" height="30"/>
+                                <color key="backgroundColor" red="0.43729041629999998" green="0.83448373929999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonWasPressed:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="6O8-7w-qR1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aKV-sV-kp4" firstAttribute="top" secondItem="VM9-p3-Txp" secondAttribute="bottom" constant="8" id="1Hy-3X-RGe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aKV-sV-kp4" secondAttribute="trailing" id="G3P-aZ-2f1"/>
+                            <constraint firstItem="VM9-p3-Txp" firstAttribute="top" secondItem="Oq2-Fn-jcB" secondAttribute="bottom" constant="151" id="HyG-bS-Ynz"/>
                             <constraint firstItem="9E6-r1-Mv0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="NlJ-0w-VRh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VM9-p3-Txp" secondAttribute="leading" id="Q32-1O-hs7"/>
                             <constraint firstItem="Oq2-Fn-jcB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="142" id="VvK-2X-1No"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oq2-Fn-jcB" secondAttribute="bottom" constant="534" id="XMV-XY-4eq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aKV-sV-kp4" secondAttribute="leading" id="fw0-Yz-fdk"/>
                             <constraint firstItem="9E6-r1-Mv0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="132" id="gdx-lw-Kqg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9E6-r1-Mv0" secondAttribute="trailing" constant="103" id="l4D-iP-lJc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9E6-r1-Mv0" secondAttribute="bottom" constant="544" id="nD7-vN-pZ1"/>
                             <constraint firstItem="Oq2-Fn-jcB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="104" id="qvX-0D-uq8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VM9-p3-Txp" secondAttribute="trailing" id="tZu-SH-gLi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oq2-Fn-jcB" secondAttribute="trailing" constant="103" id="x6v-dL-dYg"/>
                         </constraints>
+                        <connections>
+                            <outlet property="labelOne" destination="Oq2-Fn-jcB" id="uAN-Op-yd9"/>
+                            <outlet property="labelTwo" destination="9E6-r1-Mv0" id="K3e-nV-8dB"/>
+                            <outlet property="textField" destination="VM9-p3-Txp" id="d8V-xw-Qpz"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="447"/>
+            <point key="canvasLocation" x="204" y="397"/>
         </scene>
     </scenes>
 </document>
