@@ -101,6 +101,7 @@
 		4A7E198E1C548C77001210FD /* iOSAside */ = {
 			isa = PBXGroup;
 			children = (
+				4A7E19C51C54BF1A001210FD /* Extensions */,
 				4A7E19C21C54A72E001210FD /* Views */,
 				4A7E19C11C54A728001210FD /* Models */,
 				4A7E19C01C54A71F001210FD /* ViewControllers */,
@@ -153,6 +154,13 @@
 				4A7E19C31C54A783001210FD /* TestView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		4A7E19C51C54BF1A001210FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,6 +524,7 @@
 				4A7E19B91C548C79001210FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A7E19BA1C548C79001210FD /* Build configuration list for PBXNativeTarget "iOSAsideTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +533,7 @@
 				4A7E19BC1C548C79001210FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A7E19BD1C548C79001210FD /* Build configuration list for PBXNativeTarget "iOSAsideUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +542,7 @@
 				4A7E19BF1C548C79001210FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

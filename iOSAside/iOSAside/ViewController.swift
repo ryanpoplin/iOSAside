@@ -8,12 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, TestViewDelegate {
+// TODO: make it so that the keyboard can be dismissed...
+class ViewController: UIViewController, TestViewDelegate, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let view = self.view as! TestView
+        
         view.delegate = self
+        
+        // could get this data from a model
+        view.imageUrl = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRKr_ibQdOd_WCj7YSqFDwm6ZOkcdJzNnxd45-bFg7BEv6SKZJiKQ"
+        
     }
 
     override func didReceiveMemoryWarning() {
