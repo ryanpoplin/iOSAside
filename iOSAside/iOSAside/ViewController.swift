@@ -8,7 +8,6 @@
 
 import UIKit
 
-// TODO: make it so that the keyboard can be dismissed...
 class ViewController: UIViewController, TestViewDelegate, UITextFieldDelegate {
     
     override func viewDidLoad() {
@@ -19,17 +18,17 @@ class ViewController: UIViewController, TestViewDelegate, UITextFieldDelegate {
         view.delegate = self
         
         // could get this data from a model
-        view.imageUrl = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRKr_ibQdOd_WCj7YSqFDwm6ZOkcdJzNnxd45-bFg7BEv6SKZJiKQ"
+        view.imageUrl = "http://images.apple.com/home/images/og.jpg?201601171933"
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        print("Memory is fucked...")
+        print("Memory Warning...")
     }
     
     func didAlert() {
-        let alert = UIAlertController(title: "You cannot add a message with more than 13 characters, and no less that 1 character!", message: "Fuck you if that's a problem for you!", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Characters must be > 1 and < 13!", message: nil, preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sup, Byrdann?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E6-r1-Mv0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sup, Byrdann?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E6-r1-Mv0">
                                 <rect key="frame" x="124" y="152" width="167" height="40"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -27,7 +26,7 @@
                                 <color key="shadowColor" red="1" green="0.0" blue="0.15110837899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="-5"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sup, Byrdann?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-Fn-jcB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sup, Byrdann?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-Fn-jcB">
                                 <rect key="frame" x="124" y="162" width="167" height="40"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,7 +39,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-sV-kp4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-sV-kp4">
                                 <rect key="frame" x="20" y="391" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.43729041629999998" green="0.83448373929999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
@@ -48,24 +47,27 @@
                                     <action selector="buttonWasPressed:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="6O8-7w-qR1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s9A-l8-QKM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9A-l8-QKM">
                                 <rect key="frame" x="20" y="429" width="374" height="299"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="s9A-l8-QKM" secondAttribute="height" multiplier="374:299" id="eYn-Zg-LR1"/>
-                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLU-Ze-3bh">
+                                <rect key="frame" x="157" y="315" width="100" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearTextField:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="khu-g5-Beb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="s9A-l8-QKM" firstAttribute="top" secondItem="aKV-sV-kp4" secondAttribute="bottom" constant="8" id="2s2-S3-vXN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s9A-l8-QKM" secondAttribute="bottom" constant="8" id="Vh0-Am-XvM"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="s9A-l8-QKM" secondAttribute="leading" id="gl8-71-bse"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="s9A-l8-QKM" secondAttribute="trailing" id="wip-7Q-CU8"/>
+                            <constraint firstItem="pLU-Ze-3bh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="YIL-BT-iS0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pLU-Ze-3bh" secondAttribute="trailing" constant="137" id="cvh-15-Jb9"/>
+                            <constraint firstItem="pLU-Ze-3bh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="295" id="lH9-hg-ow5"/>
                         </constraints>
                         <connections>
+                            <outlet property="imageView" destination="s9A-l8-QKM" id="e5A-z8-29V"/>
                             <outlet property="labelOne" destination="Oq2-Fn-jcB" id="uAN-Op-yd9"/>
                             <outlet property="labelTwo" destination="9E6-r1-Mv0" id="K3e-nV-8dB"/>
-                            <outlet property="sexyMama" destination="s9A-l8-QKM" id="nAH-wc-zIw"/>
                             <outlet property="textField" destination="VM9-p3-Txp" id="d8V-xw-Qpz"/>
                         </connections>
                     </view>
